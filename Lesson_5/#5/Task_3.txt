@@ -1,0 +1,10 @@
+Ivanov - 100000
+Petrov - 200000
+Sidorov - 15000
+Sergeev - 19000
+Mitin - 42000
+Sokolov - 67888
+Smirnov - 56756
+Volkov - 9900
+Baranov - 23522
+Golubev - 11700
