@@ -1,7 +1,37 @@
-from functools import reduce
+class Stationery:
 
-def my_func(el_1, el_n):
-    return el_1 * el_n
+    def __init__(self, title):
+        self.title = title
 
-print(f'Список четных значений - {[el for el in range (100, 1000) if el % 2 == 0]}')
-print(f'Результат произведения - {reduce (my_func, [el for el in range (100, 1000) if el % 2 == 0])}')
+    def draw(self):
+        return f'Запуск отрисовки{self.title}'
+
+class Pen(Stationery):
+
+    def __init__(self,title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Вы взяли {self.title}. Запуск отрисовки ручкой'
+
+class Pencil(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Вы взяли {self.title}. Запуск отрисовки карандашом'
+
+
+class Handle(Stationery):
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return f'Вы взяли {self.title}. Запуск отрисовки маркером'
+
+pen = Pen('Ручка')
+pencil = Pencil('Карандаш')
+handle = Handle('Маркер')
+print(pen.draw())
+print(pencil.draw())
+print(handle.draw())
